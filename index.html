@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customRangeValue</title>
+    <title>quizApp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -12,12 +12,30 @@
 
 <body>
 
-    <h4>custom Range Slider</h4>
+    <form class="main">
+        <h4 class="question">Which language runs in a web browser?</h4>
+        <div class="choices">
+            <label for="inp1" onclick="select()">
+                <input id="inp1" type="radio" name="choices" value="Java" onchange="select()">
+                Java
+            </label>
+            <label for="inp2" onclick="select()">
+                <input id="inp2" type="radio" name="choices" value="C" onchange="select()">
+                C
+            </label>
+            <label for="inp3" onclick="select()">
+                <input id="inp3" type="radio" name="choices" value="Python" onchange="select()">
+                Python
+            </label>
+            <label for="inp4" onclick="select()">
+                <input id="inp4" type="radio" name="choices" value="JavaScript" onchange="select()">
+                JavaScript
+            </label>
+        </div>
+        <div class="btn" onclick="runQuestion(1)">Submit</div>
+    </form>
 
-    <div id="rangeContainer" class="rangeContainer">
-        <label id="lable" for="range">0</label>
-        <input id="range" type="range" class="slider" min="0" max="100" value="50">
-    </div>
+
 
 
     <script src="script.js"></script>
